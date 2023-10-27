@@ -1,0 +1,326 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'EinfachSpanien - Ihr rundum Service für einen stressfreien Umzug nach Spanien',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Termin vereinbaren',
+        href: '/contact',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Mehr erfahren', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/es_hero.webp', alt: 'EinfachSpanien Hero Bild' }}
+  >
+    <Fragment slot="title">
+      Ihr Wegweiser zum <span class="hidden xl:inline">Leben und Investieren</span>
+      <span class="text-accent dark:text-white highlight"> in Spanien</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">EinfachSpanien</span> unterstützt Sie bei jedem Schritt - vom Umzug bis zum
+        Immobilienkauf in Spanien. Lassen Sie sich von Experten führen und genießen Sie einen stressfreien Übergang ins
+        sonnige Spanien.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">EinfachSpanien: Ihr vertrauenswürdiger Begleiter.</span
+      >
+       Wir helfen bei Umzügen, Immobilienkäufen und vielem mehr. Mit uns ist der Umzug nach Spanien einfach!
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Unsere Leistungen"
+    title="Was Sie mit EinfachSpanien erhalten"
+    subtitle="Ihr zuverlässiger Partner für einen reibungslosen Umzug und Immobilienkauf in Spanien."
+    items={[
+      {
+        title: 'Umfassende Beratung',
+        description:
+          'Profitieren Sie von unserer persönlichen Erfahrung und erhalten Sie individuelle Beratung für Ihren Umzug und Immobilienkauf.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Netzwerk in Spanien',
+        description:
+          'Nutzen Sie unser weitreichendes Netzwerk von Immobilienmaklern, Banken und Dienstleistern in Spanien.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Lokale Marktkenntnisse',
+        description:
+          'Mit unserer tiefen Kenntnis des spanischen Immobilienmarktes helfen wir Ihnen, das beste Angebot zu finden.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Sprachliche Unterstützung',
+        description: 'Keine Sprachbarrieren: Wir unterstützen Sie in Deutsch und Spanisch bei allen Schritten.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Optimale Finanzierung',
+        description:
+          'Erhalten Sie Unterstützung bei der Finanzierung und sichern Sie sich die besten Konditionen für Ihren Immobilienkauf in Spanien.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Stressfreie Organisation',
+        description:
+          'Von der Besichtigung bis zur Schlüsselübergabe – wir begleiten Sie bei jedem Schritt und sorgen für einen reibungslosen Ablauf.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Ihr Weg nach Spanien"
+    title="EinfachSpanien: Wo Ihre Träume auf Erfahrung treffen!"
+    items={[
+      {
+        title: 'Erfahrung aus erster Hand',
+        description:
+          'Profitieren Sie von unserer eigenen Reise, vom Leben in Deutschland bis zum Kauf eines Hauses in Spanien.',
+      },
+      {
+        title: 'Unterstützung auf Schritt und Tritt',
+        description:
+          'Von der ersten Beratung über die Immobiliensuche bis hin zur Schlüsselübergabe - wir sind an Ihrer Seite.',
+      },
+      {
+        title: 'Sprachbarrieren überwinden',
+        description:
+          'Kommunikation ist der Schlüssel. Mit unserer zweisprachigen Unterstützung können Sie sich sicher fühlen, dass Sie alles verstehen.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/costa-del-sol.webp',
+      alt: 'Ein schöner Blick auf die Küste Spaniens',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mit Vertrauen nach Spanien</h3>
+       Mit unserer Unterstützung wird Ihr Umzug nach Spanien so einfach und stressfrei wie möglich.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Individuelle Beratung',
+        description: `Passen Sie Ihren Umzugs- und Kaufprozess an Ihre individuellen Bedürfnisse an. Wir bieten maßgeschneiderte Lösungen, die Ihnen Zeit und Mühe ersparen.`,
+      },
+      {
+        title: 'Diverse Immobilienoptionen',
+        description:
+          'Entdecken Sie eine Vielzahl von Immobilienoptionen, die Ihren Anforderungen entsprechen, und finden Sie das perfekte Zuhause in Spanien.',
+      },
+      {
+        title: 'Rundum-Support',
+        description:
+          'Von der Suche nach einem Zuhause bis zur Schlüsselübergabe – wir stellen sicher, dass Ihr Immobilienkauf in Spanien reibungslos und stressfrei verläuft.',
+      },
+      {
+        title: 'Integrierte Dienstleistungen',
+        description:
+          'Profitieren Sie von unseren zusätzlichen Dienstleistungen, wie der Organisation von Besichtigungen, Übersetzungen und vielem mehr, die den gesamten Prozess erleichtern.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/valencia-10.webp',
+      alt: 'Bild von einem gemütlichen spanischen Zuhause',
+    }}
+  >
+    <Fragment slot="content">
+      Stellen Sie sicher, dass Ihr Übergang nach Spanien wirklich Ihren Vorstellungen entspricht.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Einwandfreie Umzugsplanung',
+        description:
+          'Machen Sie Ihren Umzug nach Spanien stressfrei und reibungslos, indem Sie von unseren spezialisierten Umzugsservices profitieren.',
+      },
+      {
+        title: 'Ständige Marktbeobachtung',
+        description:
+          'Bleiben Sie immer auf dem neuesten Stand der spanischen Immobilienmärkte, um sicherzustellen, dass Sie die besten Angebote und Chancen nutzen können.',
+      },
+      {
+        title: 'Zeit- und Kostenersparnis',
+        description:
+          'Vermeiden Sie die Herausforderungen und Fallstricke, die mit dem Immobilienkauf in einem anderen Land verbunden sind. Nutzen Sie unsere Expertise, um Zeit und Geld zu sparen.',
+      },
+      {
+        title: 'Lokale Unterstützung',
+        description: `Profitieren Sie von unserem lokalen Netzwerk in Spanien, das Ihnen wertvolle Einblicke, Ressourcen und Hilfe bietet. Damit sind Sie nie allein auf Ihrer spanischen Immobilienreise.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/city-spanien.webp',
+      alt: 'Bild von einer spanischen Küstenstadt',
+    }}
+  >
+    <Fragment slot="content">Entworfen, um Ihren Traum vom Leben in Spanien Wirklichkeit werden zu lassen.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Verwirklichen Sie Ihren Traum von einem Leben in Spanien mit EinfachSpanien."
+    items={[
+      {
+        title: 'Schritt 1: <span class="font-medium">Konsultation</span>',
+        description:
+          'Beginnen Sie Ihre Reise mit einer ausführlichen Beratung. Wir hören Ihnen zu, um Ihre Bedürfnisse und Wünsche zu verstehen. Gemeinsam legen wir den Grundstein für Ihren erfolgreichen Umzug oder Immobilienkauf in Spanien.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Schritt 2: <span class="font-medium">Immobilienauswahl</span>',
+        description:
+          'Durchsuchen Sie unsere sorgfältig ausgewählten Immobilienangebote oder lassen Sie uns gemeinsam die perfekte Immobilie für Sie finden. Ob Apartment, Haus oder Villa – Ihr spanisches Zuhause wartet auf Sie.',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Schritt 3: <span class="font-medium">Umzugsplanung</span>',
+        description:
+          'Ein Umzug ins Ausland kann kompliziert sein. Aber mit unserer Erfahrung und Expertise wird dieser Prozess nahtlos und stressfrei. Wir koordinieren alles, von der Logistik bis zu den rechtlichen Aspekten.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Bereit!',
+        description: 'Genießen Sie Ihr neues Leben in Spanien, unterstützt durch EinfachSpanien.',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kuestenblick.webp',
+      alt: 'Spanischer Strand',
+    }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Entdecken Sie mehr in unserem Blog"
+    information={`Unser Blog bietet Ihnen wertvolle Einblicke und Tipps rund um das Leben und den Immobilienkauf in Spanien. Jeder neue Artikel bietet wichtige Informationen und Ratschläge, um Ihre Übersiedlung nach Spanien so reibungslos wie möglich zu gestalten. Bleiben Sie informiert und bereiten Sie sich optimal auf Ihr neues Abenteuer vor. Vielen Dank für Ihr Vertrauen in EinfachSpanien.`}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Häufig gestellte Fragen"
+    subtitle="Tauchen Sie in die folgenden Fragen ein, um Einblicke in den Prozess des Umzugs und des Lebens in Spanien sowie in die nahtlose Integration in die spanische Kultur zu erhalten."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Warum nach Spanien ziehen?',
+        description:
+          'Spanien bietet eine einzigartige Mischung aus reicher Geschichte, lebendiger Kultur und atemberaubender Landschaft. Das angenehme Klima, die köstliche Küche und die herzlichen Menschen machen es zu einem idealen Ort zum Leben.',
+      },
+      {
+        title: 'Was sollte ich über die spanische Kultur wissen?',
+        description:
+          'Die spanische Kultur legt großen Wert auf Familie und Gemeinschaft. Es ist auch üblich, spät zu essen und die Siesta, eine nachmittägliche Ruhepause, zu genießen. Es gibt zahlreiche Feste und Traditionen, die das ganze Jahr über gefeiert werden.',
+      },
+      {
+        title: 'Wie finde ich eine Unterkunft in Spanien?',
+        description:
+          'Es gibt viele Online-Plattformen und Makler, die bei der Immobiliensuche helfen können. Es ist empfehlenswert, zuerst zu mieten, um ein Gefühl für die Gegend zu bekommen, bevor Sie sich entscheiden, zu kaufen.',
+      },
+      {
+        title: 'Wie kann ich mich nahtlos in die Gemeinschaft einfügen?',
+        description:
+          'Das Erlernen der spanischen Sprache ist ein guter erster Schritt. Engagieren Sie sich in lokalen Aktivitäten, besuchen Sie kulturelle Veranstaltungen und bauen Sie Beziehungen zu Einheimischen auf. Je offener Sie sind, desto einfacher wird die Integration.',
+      },
+      {
+        title: 'Gibt es kulturelle Unterschiede, auf die ich achten sollte?',
+        description:
+          'Ja, zum Beispiel legen Spanier Wert auf Pünktlichkeit bei formellen Anlässen, aber private Treffen können lockerer sein. Es ist auch üblich, zwei Küsse zur Begrüßung zu geben, einen auf jede Wange.',
+      },
+      {
+        title: 'Was sind die wichtigsten Dinge, die ich vor dem Umzug wissen sollte?',
+        description:
+          'Es ist wichtig, sich über die notwendigen Dokumente und Verfahren für den Umzug zu informieren. Dies kann den Prozess erleichtern und unerwartete Überraschungen vermeiden. Zudem ist es ratsam, sich über das Gesundheitssystem, den Bildungsbereich und andere wesentliche Dienstleistungen zu informieren.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Erfahren Sie mehr',
+        href: 'nahtlose-integration-spanische-kultur',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Leben in&nbsp;Spanien</Fragment>
+
+    <Fragment slot="subtitle">
+      Entdecken Sie die Schönheit der spanischen Kultur und erfahren Sie, wie Sie sich nahtlos in die Gemeinschaft
+      integrieren können. <br class="hidden md:inline" />Warten Sie nicht länger, starten Sie Ihr Abenteuer heute!
+    </Fragment>
+  </CallToAction>
+</Layout>

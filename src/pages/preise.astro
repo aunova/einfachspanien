@@ -1,0 +1,229 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Unsere Preise für Ihren Umzug nach Spanien',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Kostenlose Erstberatung"
+    title="Transparente Preise für Ihren Umzug"
+    subtitle="Wählen Sie den optimalen Plan für Ihre Bedürfnisse. Erstgespräch immer kostenlos!"
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Unsere Preise"
+    subtitle="Zahlen Sie nur für das, was Sie wirklich benötigen"
+    prices={[
+      {
+        title: 'Erstgespräch',
+        subtitle: 'Ein erster Schritt in Richtung Ihres Traumhauses',
+        price: 29,
+        isStrikethrough: true,
+        period: 'Jetzt kostenlos',
+        items: [
+          {
+            description: 'Kostenfreie Erstberatung',
+          },
+          {
+            description: 'Erste Einschätzung Ihrer Bedürfnisse',
+          },
+          {
+            description: 'Allgemeine Informationen zum Umzugsprozess',
+          },
+        ],
+        callToAction: {
+          text: 'Jetzt buchen',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Standard',
+        subtitle: 'Umfassende Beratung und Unterstützung',
+        price: 299,
+        period: 'Einmalig',
+        items: [
+          {
+            description: 'Alle Leistungen des Erstgesprächs',
+          },
+          {
+            description: 'Individuelle Umzugsplanung',
+          },
+          {
+            description: 'Beratung zu Immobilien und Standorten',
+          },
+          {
+            description: 'Hilfe bei Dokumentation und Anmeldungen',
+          },
+        ],
+        callToAction: {
+          text: 'Jetzt wählen',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Premium',
+        subtitle: 'Das Rundum-sorglos-Paket für Ihren Umzug',
+        price: 699,
+        period: 'einmalig',
+        items: [
+          {
+            description: 'Alle Leistungen des Standard-Pakets',
+          },
+          {
+            description: 'Reiseberatung und -planung zur Besichtigung von Immobilien',
+          },
+          {
+            description: 'Übersetzungsdienste',
+          },
+          {
+            description: 'Terminservices / Terminerstellung für Anmeldungen (z.B. Auto, Wohnort, DNI)',
+          },
+        ],
+        callToAction: {
+          text: 'Jetzt wählen',
+          href: '/contact',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Warum unsere Preise wählen?"
+    subtitle="Entdecken Sie die Vorteile unserer Preispläne"
+    columns={2}
+    items={[
+      {
+        title: 'Kosteneffizient',
+        description:
+          'Sie zahlen nur für das, was Sie wirklich benötigen. Keine versteckten Gebühren oder Überraschungen.',
+        icon: 'tabler:coin', // Annahme: Sie verwenden tabler-Icons. Bitte ersetzen Sie durch das tatsächliche Icon, wenn nötig.
+      },
+      {
+        title: 'Flexibilität',
+        description:
+          'Unsere Preispläne sind flexibel und an Ihre Bedürfnisse angepasst, sodass Sie immer den besten Wert erhalten.',
+        icon: 'tabler:arrows-diagonal', // Gleiche Annahme wie zuvor.
+      },
+      {
+        title: 'Umfassende Dienstleistungen',
+        description:
+          'Von der Reiseberatung bis zur Übersetzung - wir bieten ein breites Spektrum an Dienstleistungen an.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Einfacher Start',
+        description: 'Unser kostenfreies Erstgespräch ermöglicht es Ihnen, den Prozess ohne Risiko zu beginnen.',
+        icon: 'tabler:help',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Ein geführter Weg zu Ihrem neuen Leben"
+    tagline="einfacher Prozess"
+    isReversed={true}
+    items={[
+      {
+        title: 'Erstberatung',
+        description:
+          'In einem ersten Gespräch erfassen wir Ihre Anforderungen und Wünsche für den geplanten Umzug nach Spanien.',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Marktforschung',
+        description:
+          'Basierend auf Ihren Angaben recherchieren wir die besten und kosteneffizientesten Transportfirmen in Spanien.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Preisvergleich',
+        description:
+          'Wir vergleichen die Angebote verschiedener spanischer Transportfirmen und zeigen Ihnen, wie Sie bis zu 30% sparen können im Vergleich zu deutschen Transportunternehmen.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Empfehlungen',
+        description:
+          'Sie erhalten von uns eine detaillierte Empfehlung, welche Transportfirma am besten zu Ihren Anforderungen passt.',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Abschluss und Feedback',
+        description:
+          'Nachdem Sie Ihre Entscheidung getroffen haben, würden wir gerne erfahren, wie zufrieden Sie mit unserem Service waren und ob wir noch etwas verbessern können.',
+        icon: 'tabler:number-5',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Beratung für den Umzug nach Spanien',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Häufig gestellte Fragen zu unseren Preisen"
+    subtitle="Die richtige Wahl ist wichtig. Hier beantworten wir Ihre Fragen zu unseren Preisoptionen."
+    columns={1}
+    items={[
+      {
+        title: 'Warum sollte ich eine spanische Transportfirma beauftragen?',
+        description:
+          'In vielen Fällen können Sie bis zu 30% sparen, wenn Sie direkt eine spanische Transportfirma beauftragen im Vergleich zu deutschen Transportunternehmen. Spanische Firmen haben oft bessere lokale Kenntnisse und Kontakte, die den Umzugsprozess erleichtern können.',
+      },
+      {
+        title: 'Bieten Sie auch Umzugsservices an?',
+        description:
+          'Wir bieten keine direkten Umzugsservices an. Unsere Haupttätigkeit besteht darin, zu beraten und die besten Transportoptionen zu empfehlen. Wir unterstützen Sie bei der Suche nach der besten und kosteneffizientesten Lösung für Ihren Umzug nach Spanien.',
+      },
+      {
+        title: 'Wie bestimmen Sie Ihre Preise?',
+        description:
+          'Unsere Preise basieren auf der Komplexität und Dauer der Beratung, der Recherche und der Empfehlungen, die wir anbieten. Wir sind bestrebt, transparent und fair zu sein, sodass Sie stets den besten Wert für Ihr Geld erhalten.',
+      },
+      {
+        title: 'Gibt es versteckte Kosten?',
+        description:
+          'Nein, wir legen alle Kosten im Voraus offen. Unsere Absicht ist es, transparent und ehrlich zu sein, damit Sie genau wissen, wofür Sie bezahlen.',
+      },
+      {
+        title: 'Kann ich eine Rückerstattung erhalten, wenn ich nicht zufrieden bin?',
+        description:
+          'Unsere Priorität ist Ihre Zufriedenheit. Wenn es Probleme oder Bedenken gibt, setzen Sie sich bitte mit uns in Verbindung, und wir werden unser Bestes tun, um eine Lösung zu finden.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Bereit für Ihren Umzug nach Spanien?"
+    subtitle="Tritt unserer Gemeinschaft zufriedener Kunden bei, die mit uns den großen Schritt gewagt haben."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Jetzt loslegen',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>

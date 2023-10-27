@@ -1,0 +1,157 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content2 from '~/components/widgets/Content2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Über uns',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Über uns"
+    image={{
+      src: '~/assets/images/ppk.webp',
+      alt: 'Tere & Chris',
+    }}
+  >
+    <Fragment slot="title">
+      Wir wissen, dass Vertrauen wichtig ist, deshalb möchten wir <br />
+      <span class="text-accent dark:text-white highlight"> Dir unsere Geschichte erzählen.</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Teresa und Christian, ein deutsch-spanisches Ehepaar, wollten ein Haus in Spanien kaufen. Sie fanden ihr
+      Traumhaus, aber der Kaufprozess war schwierig und zeitaufwendig. Aufgrund ihrer Erfahrungen beschlossen sie,
+      anderen beim Kauf von Immobilien in Spanien zu helfen.
+    </Fragment>
+  </Hero>
+
+  <Content2>
+    <Fragment slot="title">
+      Unsere
+      <span class="text-accent dark:text-white highlight"> Geschichte</span>
+    </Fragment>
+
+    <Fragment slot="content">
+      <p>
+        Wir sind Teresa und Christian, ein deutsch-spanisches Ehepaar, das das Meer, das Klima und die Kultur in Spanien
+        liebt.
+      </p>
+      <br />
+
+      <p>
+        Obwohl wir uns in Deutschland kennengelernt haben und dort einige Jahre gelebt haben, beschlossen wir, als
+        unsere Familie wuchs, unser Traum zu verwirklichen und uns ein Haus in Spanien zu kaufen.
+      </p>
+      <br />
+
+      <p>
+        Wir begannen voller Vorfreude damit, online nach Immobilien zum Verkauf zu suchen, Angebote zu vergleichen und
+        mit Immobilienmaklern in Kontakt zu treten, da Teresa Spanisch spricht. Wir organisierten eine Reise, um mehrere
+        Wohnungen zu besichtigen, und da wir keine vertrauenswürdige Person in Spanien hatten, die uns bei der
+        Organisation und dem Prozess helfen konnte, stießen wir auf einige Probleme und konnten nichts abschließen.
+      </p>
+      <br />
+
+      <p>
+        Einen Monat später, mit der gleichen Vorfreude wie am ersten Tag, beschlossen wir, zurückzukehren, nachdem wir
+        alles klarer hatten. Dort fanden wir unsere Traumwohnung, die unserem Budget entsprach und Meerblick hatte.
+      </p>
+      <br />
+
+      <p>
+        Wir waren super aufgeregt! Als nächstes mussten wir mit Banken und den offiziellen spanischen Behörden die
+        Formalitäten für den Kauf erledigen. Wir hatten erwartet, dass alles einfach wäre, wenn wir es von Deutschland
+        aus verwalteten, und dass wir es in wenigen Monaten abschließen könnten. Aber die Realität war eine andere. Wir
+        brauchten neue Dokumente, um kaufen zu können, die Banken benötigten mehr Informationen, da wir Staatsangehörige
+        eines anderen Landes sind, Anrufe bei der spanischen Polizei, um den NIE zu beantragen, Reisen zur
+        Unterzeichnung des Vorvertrags, Gesetzgebung eines anderen Landes ... Dieser Prozess dauerte fast ein halbes
+        Jahr, mit E-Mails, Dokumenten, Briefen, Anrufen und Reisen, die wir vermeiden hätten können, wenn wir eine
+        Person in Spanien gehabt hätten, die uns geholfen hätte, und uns so Geld, Probleme und Zeit gespart hätte.
+      </p>
+      <br />
+
+      <p>
+        Aufgrund unserer Erfahrung haben wir uns entschlossen, Menschen zu helfen, die wie wir eine Immobilie in Spanien
+        kaufen möchten, während sie in Deutschland sind. Wir machen den Weg zum Traum, jeden Tag beim Aufwachen das Meer
+        aus dem Fenster zu sehen, einfacher.
+      </p>
+    </Fragment>
+  </Content2>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Warum solltest Du uns vertrauen?"
+    columns={2}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Erfahrungen',
+        description: 'Wir haben selbst die Erfahrung gemacht, eine Immobilie in Spanien als Deutsche zu kaufen.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fallstricke',
+        description: 'Wir kennen die Herausforderungen und Fallstricke, die dabei auftreten können.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Netzwerk',
+        description:
+          'Wir haben ein Netzwerk von erfahrenen Partnern in Spanien, die uns bei der Unterstützung unserer Kunden helfen.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Unterstützung',
+        description: 'Wir bieten eine umfassende Beratung und Unterstützung bei allen Schritten des Kaufprozesses.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Unsere Werte"
+    items={[
+      {
+        title: 'Vertrauen',
+        description:
+          'Wir schaffen ein Klima des Vertrauens und der Zuverlässigkeit, indem wir ehrlich und transparent mit unseren Kunden kommunizieren und unsere Versprechen halten.',
+      },
+      {
+        title: 'Kompetenz',
+        description:
+          'Wir sind Experten für den Umzug nach Spanien und verfügen über das notwendige Wissen und die Erfahrung, um unsere Kunden bei jedem Schritt des Prozesses zu unterstützen.',
+      },
+      {
+        title: 'Engagement',
+        description:
+          'Wir sind leidenschaftlich für unsere Arbeit und setzen uns mit all unserer Kraft dafür ein, dass unsere Kunden ihre Traumimmobilie in Spanien finden.',
+      },
+    ]}
+  />
+
+  <!-- CTA Widget ************** -->
+
+  <CallToAction
+    title="Träumen Sie von einem Leben in Spanien?"
+    subtitle="Unser Team von Experten steht bereit, um Ihnen den Umzug so einfach und stressfrei wie möglich zu gestalten. Lassen Sie uns Ihnen helfen, Ihr Traumhaus zu finden!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sprechen Sie mit uns',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

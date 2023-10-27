@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Nach Spanien umziehen leicht gemacht: Ihr Leitfaden zum Traumhaus',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline="Das Abenteuer Spanien wartet!"
+    title="Entdecken Sie, wie Sie nahtlos nach Spanien umziehen können"
+    subtitle="Von der Wahl des perfekten Ortes bis hin zur Immobiliensuche – wir begleiten Sie bei jedem Schritt auf Ihrem Weg ins spanische Paradies."
+    actions={[
+      { variant: 'primary', text: 'Jetzt loslegen', href: '/contact', icon: 'tabler:arrow-right-circle' },
+      { text: 'Entdecken Sie, wie es funktioniert', href: '/#features' },
+    ]}
+    image={{
+      src: '~/assets/images/city-spanien.webp',
+      alt: 'Blick auf eine idyllische spanische Stadt, weiß getünchte Gebäude unter der Mittelmeersonne.',
+    }}
+  />
+
+  <CallToAction
+    title="Träumen Sie von einem Leben in Spanien?"
+    subtitle="Unser Team von Experten steht bereit, um Ihnen den Umzug so einfach und stressfrei wie möglich zu gestalten. Lassen Sie uns Ihnen helfen, Ihr Traumhaus zu finden!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sprechen Sie mit uns',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

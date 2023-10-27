@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import GoogleForm from '~/components/widgets/GoogleForm.astro';
+
+const metadata = {
+  title: 'Kontakt',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Kontakt" title="Einfach Melden" />
+  <GoogleForm />
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Wir sind hier um zu helfen!"
+    items={[
+      {
+        title: 'Einfach WhatsApp',
+        description: `Senden Sie uns gerne einfach eine WhatsApp: +34 638 44 87 25`,
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Einfach E-Mail',
+        description: 'Senden Sie uns gerne einfach eine E-Mail: hallo@einfachspanien.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Einfach XMTP',
+        description: 'Senden Sie uns gerne einfach eine XMTP: metaend.eth',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+</Layout>
