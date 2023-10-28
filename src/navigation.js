@@ -38,7 +38,7 @@ export const footerData = {
   secondaryLinks: [{ text: 'Terms', href: getPermalink('/terms') }],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://bsky.app/profile/einfachspanien.com' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/einfachspanien/' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
   ],
   footNote: `
