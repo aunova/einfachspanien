@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: EinfachSpanien
-    template: '%s — AstroWind'
-  description: "placeholder"
+    template: '%s'
+  description: "Entdecken Sie umfassende Beratung und maßgeschneiderte Empfehlungen für Ihren Umzug nach Spanien. Sparen Sie bis zu 30% mit unseren Expertentipps zur Auswahl der besten Transportfirmen. Keine versteckten Kosten, vollständige Transparenz und Kundenzufriedenheit stehen bei uns an erster Stelle. Finden Sie Antworten auf alle Ihre Fragen zu unseren Preisen und Services in unserem FAQ-Bereich."
   robots:
     index: true
     follow: true
