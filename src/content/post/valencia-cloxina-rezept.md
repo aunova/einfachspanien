@@ -2,7 +2,7 @@
 publishDate: 2023-12-05T08:00:00Z
 title: 'Authentisches Cloxina-Rezept aus Valencia: Einfach und aromatisch'
 excerpt: Genießen Sie Valencia mit unserem einfachen Cloxina-Rezept. Dämpfen Sie Muscheln mit Knoblauch und Zitrone für eine aromatische Delikatesse.
-image: ~/assets/images/costa-del-azahar.webp
+image: ~/assets/images/cloxina.webp
 tags:
   - Valencia Cloxina
   - Spanische Küche
